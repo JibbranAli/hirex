@@ -1,13 +1,34 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-const backgroundImages = [
+// Custom hook to detect if the screen is mobile
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return isMobile;
+}
+
+const backgroundImagesDesktop = [
   '/assets/Hirex-main-banner.jpg',
   '/assets/Hirex-main-banner2.jpg',
   '/assets/Hirex-main-banner3.jpg',
   '/assets/Hirex-main-banner4.jpg',
 ];
 
+// Add your mobile-specific images here (can reuse or use new ones)
+const backgroundImagesMobile = [
+  '/assets/1.jpg',
+  '/assets/2.jpg',
+  '/assets/3.jpg',
+  '/assets/4.jpg',
+];
+
 const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
+  const isMobile = useIsMobile();
+  const backgroundImages = isMobile ? backgroundImagesMobile : backgroundImagesDesktop;
   const [current, setCurrent] = useState(0);
   const [sliding, setSliding] = useState(false);
   const timeoutRef = useRef<number | null>(null);
@@ -23,7 +44,7 @@ const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [current]);
+  }, [current, backgroundImages.length]);
 
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -59,8 +80,7 @@ const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
               key={src}
               src={src}
               alt="Hero background"
-              className="w-full h-full object-cover flex-shrink-0"
-              style={{ minWidth: '100vw', minHeight: '100%' }}
+              className="w-screen h-screen object-cover object-center flex-shrink-0"
             />
           ))}
         </div>
