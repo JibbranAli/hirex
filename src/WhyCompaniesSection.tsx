@@ -42,7 +42,7 @@ const WhyCompaniesSection = () => (
       </AnimatedSection>
       <AnimatedSection>
         <div className="text-center">
-          <div className="bg-black text-white px-8 py-4 rounded-2xl inline-block hover:bg-gray-800 hover:scale-110 transition-all duration-500 shadow-xl hover:shadow-2xl">
+          <div className="bg-green-500 text-white px-8 py-4 rounded-2xl inline-block hover:bg-green-600 hover:scale-110 transition-all duration-500 shadow-xl hover:shadow-2xl">
             <p className="text-2xl font-bold">50+ Companies Already Confirmed</p>
           </div>
         </div>
