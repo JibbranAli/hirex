@@ -257,7 +257,7 @@ function App() {
       <HirexExperienceSection />
       <WhatCompaniesGetSection />
       <StudentProfilesSection students={students} />
-      <CallToActionSection />
+      {/* <CallToActionSection /> */}
       <FooterSection />
     </div>
   );
