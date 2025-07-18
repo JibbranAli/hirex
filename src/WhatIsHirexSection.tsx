@@ -17,7 +17,7 @@ const WhatIsHirexSection = () => (
               HIREX is India's First Experiential Hiring Conclave where CGPA, college name, and pedigree take a backseat — and real, production-grade projects take centerstage.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              It is the culmination event of "The Creator 2025", our exclusive Summer Internship Program where engineering students from 100+ top colleges across India are trained, mentored, and guided to build real-world projects under the leadership of Mr. Vimal Daga.
+              It is the culmination event of <span className="font-bold">The Creator 2025</span>, our exclusive Summer Internship Program where engineering students from <span className="font-bold">100+</span> top colleges across India are trained, mentored, and guided to build real-world projects under the leadership of <span className="font-bold">Mr. Vimal Daga</span>.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               At HIREX, you don't interview on resumes — you hire based on what's been built, deployed, and tested.

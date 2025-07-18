@@ -16,7 +16,7 @@ const StudentStatsSection = ({ states }: { states: string[] }) => (
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="text-center bg-red-600/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-red-600/20 hover:scale-105 transition-all duration-500 group">
             <div className="text-5xl md:text-6xl font-black text-red-500 mb-4">
-              <Counter end={1000} suffix="+" />
+              <Counter end={500} suffix="+" />
             </div>
             <p className="text-xl font-semibold group-hover:text-red-300 transition-colors duration-300">Students from 100+ Engineering Colleges</p>
           </div>
