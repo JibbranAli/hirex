@@ -87,37 +87,48 @@ const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
       </div>
       {/* Content goes here (centered, z-10, etc.) */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8" style={{ paddingTop: '4rem' }}>
-        <div className="max-w-6xl mx-auto w-full">
-          <div className={`transform transition-all duration-1500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            {/* Main heading */}
-            <div className="text-center mb-4 mt-20 md:mb-8 md:mt-32">
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black mb-4 md:mb-6 leading-tight tracking-tight drop-shadow-2xl animate-pulse hover:scale-105 transition-transform duration-500 cursor-default">
-                <span className="inline-block bg-black rounded-2xl md:rounded-3xl px-4 py-2 md:px-8 md:py-3 border border-black shadow-2xl text-red-600">
-                  HIREX
-                </span> <span className="text-white">2025</span>
-              </h1>
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 py-3 md:px-8 md:py-6 inline-block border border-white/30 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500">
-                <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 font-bold">
-                  India's Biggest Experiential Hiring Platform
-                </p>
+        <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full">
+            {/* HIREX 2025 left block */}
+            <div className="flex flex-col items-center md:items-start md:w-1/2">
+              <div className="flex items-center">
+                <span className="text-[6rem] ml-28 md:text-[10rem] font-black text-red-600 leading-none tracking-tight select-none relative" style={{lineHeight:1}}>
+                  HIRE
+                  <span className="relative text-[6rem] md:text-[10rem] font-black text-red-600 ml-1">
+                    X
+                    <span className="absolute left-1/2 top-1/2 bg-white text-black text-xs tracking-wider md:text-base font-bold px-2 py-1 rounded shadow" style={{transform:'translate(-50%, -50%)'}}>
+                      2025
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
-            {/* Subtitle */}
-            <div className="text-center mb-6 md:mb-12" style={{ animationDelay: '0.5s' }}>
-              <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 py-3 md:px-8 md:py-6 inline-block max-w-xs sm:max-w-2xl md:max-w-4xl shadow-2xl border border-gray-700 hover:shadow-3xl hover:scale-105 transition-all duration-500">
-                <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white font-medium leading-relaxed">
-                  Where Engineering Talent Is Hired for What They Do
-                  <br />
-                  <span className="text-gray-300">— Not Just What They Know</span>
-                </p>
-              </div>
+            {/* Right-aligned text block */}
+            <div className="flex flex-col items-center md:items-start md:w-1/2 mt-8 md:mt-0 md:pl-2">
+              <span className="text-white text-2xl mr-2 md:text-4xl font-normal whitespace-nowrap text-left">
+                India's Biggest Experiential
+              </span>
+              <span className="bg-white text-black text-2xl md:text-4xl font-normal px-2 md:px-4 py-1 md:py-2 mt-2 whitespace-nowrap text-left">
+                Freshers Hiring Platform
+              </span>
             </div>
-            {/* CTA Button */}
-            <div className="text-center" style={{ animationDelay: '1.5s' }}>
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 md:px-12 md:py-6 rounded-full text-base sm:text-lg md:text-xl font-bold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl flex items-center mx-auto group shadow-xl hover:rotate-1 animate-bounce hover:animate-none">
-                Join the Revolution
-              </button>
-            </div>
+          </div>
+          {/* Red underline */}
+          <div className="flex justify-center mt-6 mb-6 w-full">
+            <div className="h-0.5 bg-red-600 w-full max-w-3xl mx-auto"></div>
+          </div>
+          {/* Subtitle */}
+          <div className="text-center mb-8">
+            <span className="text-white text-2xl md:text-3xl font-normal">
+              Where Engineering Talent Is Hired for What They Do<br className="hidden xs:block" />
+              <span className="block mt-1">— Not Just What They Know</span>
+            </span>
+          </div>
+          {/* CTA Button */}
+          <div className="text-center">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 md:px-16 md:py-6 rounded-full text-xl md:text-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl">
+              Join the Hiring Revolution
+            </button>
           </div>
         </div>
       </div>
