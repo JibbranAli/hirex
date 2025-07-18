@@ -69,7 +69,7 @@ const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
       <nav className="fixed top-0 left-0 w-full z-20 bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-black text-red-600 tracking-tight">HIREX</span>
+            <img src="/assets/logo.png" alt="HIREX Logo" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-gray-700 hover:text-red-600 font-semibold transition-colors">About</a>

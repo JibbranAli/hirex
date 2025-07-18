@@ -204,32 +204,44 @@ function App() {
     {
       title: "DevOps Engineer",
       icon: Cpu,
-      skills: ["Git", "Docker", "Jenkins", "Kubernetes", "CI/CD"]
+      skills: [
+        "Git", "Docker", "Jenkins", "Kubernetes", "GitHub", "Linux", "Terraform", "AWS", "Grafana"
+      ]
     },
     {
       title: "MLOps Engineer", 
       icon: Brain,
-      skills: ["MLFlow", "DVC", "Kubeflow", "Model Deployment"]
+      skills: [
+        "Python", "Docker", "Kubernetes", "MLflow", "Flask", "AWS Sagemaker", "TensorFlow", "Prometheus", "CI/CD"
+      ]
     },
     {
       title: "Cloud Engineer",
       icon: Cloud,
-      skills: ["AWS", "Azure", "GCP", "Infra-as-Code"]
+      skills: [
+        "AWS", "Terraform", "Ansible", "Docker", "Kubernetes", "CloudFormation", "Linux", "VPC", "IAM"
+      ]
     },
     {
       title: "Full Stack Developer",
       icon: Code,
-      skills: ["React", "Node.js", "MongoDB", "REST APIs"]
+      skills: [
+        "HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "MongoDB", "MySQL", "Flask", "Docker", "Git"
+      ]
     },
     {
       title: "Agentic AI Engineer",
       icon: Brain,
-      skills: ["LangChain", "LLMs", "RAG", "Auto Agents"]
+      skills: [
+        "Python", "LangChain", "LLMs (GPT, Claude)", "OpenAI API", "Hugging Face", "Streamlit", "Docker", "Gemini"
+      ]
     },
     {
       title: "ML Engineer",
       icon: Database,
-      skills: ["Scikit-learn", "PyTorch", "NLP", "Computer Vision"]
+      skills: [
+        "Python", "NumPy", "Pandas", "Scikit-learn", "TensorFlow", "PyTorch", "Matplotlib", "Jupyter", "MLflow", "Git"
+      ]
     }
   ];
 
