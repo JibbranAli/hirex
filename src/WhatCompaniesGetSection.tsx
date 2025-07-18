@@ -13,41 +13,54 @@ const WhatCompaniesGetSection = () => (
         </div>
       </AnimatedSection>
       <AnimatedSection>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-3 hover:scale-105">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              <Database className="w-8 h-8 text-blue-600 group-hover:text-white transition-all duration-500" />
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Database icon or similar */}
+              <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"/><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"/></svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Talent Directory</h3>
-            <p className="text-gray-600">GitHub, portfolios & project details</p>
+            <h3 className="text-lg font-bold mb-2">Talent Directory</h3>
+            <p className="text-gray-600 text-sm">Full access to verified student profiles, including GitHub links, portfolios, and real-world project showcases</p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-3 hover:scale-105" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              <Building2 className="w-8 h-8 text-green-600 group-hover:text-white transition-all duration-500" />
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Interview icon */}
+              <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h6"/></svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Interview Booths</h3>
-            <p className="text-gray-600">On-the-spot Technical + HR rounds</p>
+            <h3 className="text-lg font-bold mb-2">Interview Booth</h3>
+            <p className="text-gray-600 text-sm">Dedicated space for live technical + HR interview rounds during the event</p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-3 hover:scale-105" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-600 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              <Users className="w-8 h-8 text-purple-600 group-hover:text-white transition-all duration-500" />
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Resume icon */}
+              <svg className="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 9h6M9 13h6"/></svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Resume Bank</h3>
-            <p className="text-gray-600">Post-event access to all unplaced candidates</p>
+            <h3 className="text-lg font-bold mb-2">Resume Bank</h3>
+            <p className="text-gray-600 text-sm">Post-event access to resumes of all unplaced, skilled candidates</p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-3 hover:scale-105" style={{ animationDelay: '0.3s' }}>
-            <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-600 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              <Award className="w-8 h-8 text-orange-600 group-hover:text-white transition-all duration-500" />
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Globe/Branding icon */}
+              <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Recruiter Support</h3>
-            <p className="text-gray-600">Pre-screening by LinuxWorld team</p>
+            <h3 className="text-lg font-bold mb-2">Branding & Visibility</h3>
+            <p className="text-gray-600 text-sm">Your company will be prominently featured across our social media, website, event PR, and highlight reels</p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-3 hover:scale-105" style={{ animationDelay: '0.4s' }}>
-            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-600 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              <Globe className="w-8 h-8 text-red-600 group-hover:text-white transition-all duration-500" />
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Award/Support icon */}
+              <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h0a4 4 0 014 4v2"/></svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Branding</h3>
-            <p className="text-gray-600">Featured on social media, website, reels</p>
+            <h3 className="text-lg font-bold mb-2">Recruiter Support</h3>
+            <p className="text-gray-600 text-sm">Pre-screened candidates, coordinated schedules, and on-ground support by the LinuxWorld team</p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              {/* Star/Early Access icon */}
+              <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>
+            </div>
+            <h3 className="text-lg font-bold mb-2">Early Access to Top Talent</h3>
+            <p className="text-gray-600 text-sm">Get priority access to shortlist and connect with top-performing students even before the event day</p>
           </div>
         </div>
       </AnimatedSection>
