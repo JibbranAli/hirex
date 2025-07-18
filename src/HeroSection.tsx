@@ -29,10 +29,18 @@ const backgroundImagesDesktop = [
 
 // Add your mobile-specific images here (can reuse or use new ones)
 const backgroundImagesMobile = [
-  '/assets/1.jpg',
-  '/assets/2.jpg',
-  '/assets/3.jpg',
-  '/assets/4.jpg',
+  '/assets/M1.jpg',
+  '/assets/M2.jpg',
+  '/assets/M3.jpg',
+  '/assets/M4.jpg',
+  '/assets/M5.jpg',
+  '/assets/M6.jpg',
+  '/assets/M7.jpg',
+  '/assets/M8.jpg',
+  '/assets/M9.jpg',
+  '/assets/M10.jpg',
+  '/assets/M11.jpg',
+  '/assets/M12.jpg',
 ];
 
 const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
@@ -99,9 +107,9 @@ const HeroSection = ({ isVisible }: { isVisible: boolean }) => {
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center text-center">
           <div className="flex flex-col md:flex-row items-center justify-center w-full">
             {/* HIREX 2025 left block */}
-            <div className="flex flex-col items-center md:items-start md:w-1/2">
-              <div className="flex items-center">
-                <span className="text-[6rem] ml-28 md:text-[10rem] font-black text-red-600 leading-none tracking-tight select-none relative" style={{lineHeight:1}}>
+            <div className="flex flex-col items-center md:items-start md:w-1/2 w-full">
+              <div className="flex items-center justify-center md:justify-start w-full">
+                <span className="text-[6rem] ml-0 md:ml-28 md:text-[10rem] font-black text-red-600 leading-none tracking-tight select-none relative" style={{lineHeight:1}}>
                   HIRE
                   <span className="relative text-[6rem] md:text-[10rem] font-black text-red-600 ml-1">
                     X
