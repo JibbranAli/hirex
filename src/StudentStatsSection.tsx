@@ -37,7 +37,7 @@ const StudentStatsSection = ({ states }: { states: string[] }) => (
       <AnimatedSection>
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-6">Regional Coverage</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             {states.map((state, index) => (
               <span 
                 key={index} 
@@ -48,6 +48,7 @@ const StudentStatsSection = ({ states }: { states: string[] }) => (
               </span>
             ))}
           </div>
+          <img src="/assets/Asset-1.png" alt="Asset 1" className="mx-auto mt-4 max-w-[500px] w-full h-auto rounded-xl shadow-lg" />
         </div>
       </AnimatedSection>
     </div>
