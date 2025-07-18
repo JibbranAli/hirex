@@ -11,7 +11,7 @@ const StudentProfilesSection = ({ students }: { students: any[] }) => (
             Meet Our <span className="text-red-600">Students</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Industry-ready talent from top engineering colleges across India
+            Industry-ready talent from engineering colleges across India
           </p>
         </div>
       </AnimatedSection>
