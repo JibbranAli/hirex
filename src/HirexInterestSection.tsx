@@ -28,8 +28,12 @@ const HirexInterestSection = () => {
     setError('');
 
     try {
-      // Send email using our local server
-      const response = await fetch('http://localhost:3001/api/send-email', {
+      // Send email using appropriate endpoint based on environment
+      const apiUrl = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3001/api/send-email' 
+        : '/api/send-email';
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
