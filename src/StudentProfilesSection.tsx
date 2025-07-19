@@ -21,9 +21,9 @@ const StudentProfilesSection = ({ students }: { students: any[] }) => (
         ))}
       </div>
       <div className="flex justify-center mt-10">
-        <a href="/portfolios" target="_blank" rel="noopener noreferrer">
+        <a href="https://studentportfolio.lwhirex.com" target="_blank" rel="noopener noreferrer">
           <button className="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-all duration-500 hover:bg-red-700 hover:scale-110 animate-pulse">
-            See All Portfolios...
+            See More
           </button>
         </a>
       </div>

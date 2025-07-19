@@ -1,11 +1,34 @@
 import React from 'react';
 import useIntersectionObserver from './useIntersectionObserver';
-import { Linkedin, Github, ExternalLink, Star } from 'lucide-react';
+import { Linkedin, Github, ExternalLink, Star, MapPin } from 'lucide-react';
 
-const StudentCard = ({ name, college, year, image, index }: { name: string; college: string; year: string; image: string; index: number }) => {
+const StudentCard = ({ 
+  name, 
+  college, 
+  passingOutYear, 
+  photo, 
+  github, 
+  linkedin,
+  portfolio, 
+  role, 
+  availability, 
+  index 
+}: { 
+  name: string; 
+  college: string; 
+  passingOutYear: string; 
+  photo: string; 
+  github: string;
+  linkedin: string;
+  portfolio: string;
+  role: string;
+  availability: string[];
+  index: number 
+}) => {
   const [ref, isVisible] = useIntersectionObserver();
   const colors = ['bg-blue-500', 'bg-green-500', 'bg-teal-500', 'bg-purple-500', 'bg-orange-500', 'bg-pink-500'];
   const colorClass = colors[index % colors.length];
+  
   return (
     <div 
       ref={ref as any}
@@ -20,7 +43,7 @@ const StudentCard = ({ name, college, year, image, index }: { name: string; coll
       <div className="relative z-10 p-8">
         <div className="relative mb-6">
           <img 
-            src={image} 
+            src={photo} 
             alt={name}
             className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-500"
           />
@@ -30,17 +53,37 @@ const StudentCard = ({ name, college, year, image, index }: { name: string; coll
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">{name}</h3>
         <p className="text-gray-600 text-sm mb-1 font-medium">{college}</p>
-        <p className="text-gray-500 text-sm mb-6">Class of {year}</p>
+        <p className="text-gray-500 text-sm mb-2">Class of {passingOutYear}</p>
+        <p className="text-red-600 text-sm font-semibold mb-3">{role}</p>
+        <div className="flex justify-center items-center mb-4">
+          <MapPin className="w-4 h-4 text-gray-500 mr-1" />
+          <span className="text-xs text-gray-500">{availability.join(', ')}</span>
+        </div>
         <div className="flex justify-center space-x-4">
-          <button className="bg-blue-100 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md">
+          <a 
+            href={linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-blue-100 hover:bg-blue-600 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md"
+          >
             <Linkedin className="w-5 h-5 text-blue-600 group-hover:text-white" />
-          </button>
-          <button className="bg-gray-100 hover:bg-gray-800 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md">
+          </a>
+          <a 
+            href={github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gray-100 hover:bg-gray-800 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md"
+          >
             <Github className="w-5 h-5 text-gray-800 group-hover:text-white" />
-          </button>
-          <button className="bg-red-100 hover:bg-red-600 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md">
+          </a>
+          <a 
+            href={portfolio} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-red-100 hover:bg-red-600 p-3 rounded-full transition-all duration-300 group hover:scale-110 hover:rotate-12 shadow-md"
+          >
             <ExternalLink className="w-5 h-5 text-red-600 group-hover:text-white" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

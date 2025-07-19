@@ -246,12 +246,78 @@ function App() {
   ];
 
   const students = [
-    { name: "Rahul Sharma", college: "IIT Delhi", year: "2025", image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" },
-    { name: "Priya Patel", college: "NIT Surat", year: "2025", image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" },
-    { name: "Arjun Singh", college: "BITS Pilani", year: "2026", image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" },
-    { name: "Ananya Gupta", college: "VIT Vellore", year: "2025", image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" },
-    { name: "Karthik Reddy", college: "IIIT Hyderabad", year: "2026", image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" },
-    { name: "Sneha Jain", college: "DTU Delhi", year: "2025", image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" }
+    {
+      id: '1',
+      name: 'Bhavesh Suthar',
+      college: 'Shri Jain PG College',
+      passingOutYear: '2025',
+      github: 'https://github.com/bhaveshsuthar-63777',
+      linkedin: 'https://www.linkedin.com/in/bhavesh-suthar-29a609212/',
+      portfolio: 'https://1bhaveshportfolio.netlify.app/',
+      photo: 'https://via.placeholder.com/150',
+      role: 'Agentic AI - 107',
+      availability: ['Offline']
+    },
+    {
+      id: '2',
+      name: 'Hardik Gothwal',
+      college: 'Poornima College of Engineering',
+      passingOutYear: '2026',
+      github: 'https://github.com/hardik0501',
+      linkedin: 'https://www.linkedin.com/in/hardik-gothwal-519821256',
+      portfolio: 'https://hardikresume.netlify.app/',
+      photo: 'https://via.placeholder.com/150',
+      role: 'DevOps Engineer',
+      availability: ['Offline']
+    },
+    {
+      id: '3',
+      name: 'Vikash Kumar Singh',
+      college: 'Lovely Professional University',
+      passingOutYear: '2026',
+      github: 'https://github.com/vikashkumar991',
+      linkedin: 'https://www.linkedin.com/in/vikash-kumar-singh-784146290',
+      portfolio: 'https://dev-vikash.netlify.app',
+      photo: 'https://via.placeholder.com/150',
+      role: 'DevOps Engineer',
+      availability: ['Offline']
+    },
+    {
+      id: '4',
+      name: 'Hemant Modi',
+      college: 'Vivekananda Global University',
+      passingOutYear: '2027',
+      github: 'https://github.com/Hemantmodi-15',
+      linkedin: 'https://www.linkedin.com/in/hemant-modi-3789a6209',
+      portfolio: 'https://hemantmodiportfolio.netlify.app/',
+      photo: 'https://via.placeholder.com/150',
+      role: 'Machine Learning Engineer',
+      availability: ['Offline']
+    },
+    {
+      id: '5',
+      name: 'Bhumika Dagdi',
+      college: 'SKIT Jaipur',
+      passingOutYear: '2026',
+      github: 'https://github.com/Bhumika-Dagdi',
+      linkedin: 'https://linkedin.com/in/bhumika-dagdi',
+      portfolio: 'https://bhumika-dagdi.netlify.app/',
+      photo: 'https://via.placeholder.com/150',
+      role: 'Machine Learning Engineer',
+      availability: ['Offline']
+    },
+    {
+      id: '6',
+      name: 'Divya Raghav',
+      college: 'B K Birla Institute of Engineering & Technology',
+      passingOutYear: '2025',
+      github: 'https://github.com/',
+      linkedin: 'https://www.linkedin.com/in/d-raghav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+      portfolio: 'https://divya-raghav.framer.ai/#portfolio',
+      photo: 'https://via.placeholder.com/150',
+      role: 'Agentic AI - 107',
+      availability: ['Offline']
+    }
   ];
 
   const states = [
