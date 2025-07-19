@@ -25,9 +25,9 @@ const WhatIsHirexSection = () => (
           </div>
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
-              alt="HIREX Platform"
-              className="rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500"
+              src="/assets/what-is-HIREX.jpg" 
+              alt="What is HIREX"
+              className="rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 w-full h-auto"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-transparent rounded-2xl hover:from-red-600/30 transition-all duration-500"></div>
           </div>

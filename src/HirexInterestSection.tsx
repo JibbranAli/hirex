@@ -10,6 +10,8 @@ const HirexInterestSection = () => {
     interestedIn: 'fulltime',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,10 +22,49 @@ const HirexInterestSection = () => {
     setForm((prev) => ({ ...prev, interestedIn: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Backend integration will be added later
+    setLoading(true);
+    setError('');
+
+    try {
+      // Send email using our local server
+      const response = await fetch('http://localhost:3001/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: form.fullName,
+          companyName: form.companyName,
+          designation: form.designation,
+          email: form.email,
+          contact: form.contact,
+          interestedIn: form.interestedIn
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setForm({
+          fullName: '',
+          companyName: '',
+          designation: '',
+          email: '',
+          contact: '',
+          interestedIn: 'fulltime',
+        });
+      } else {
+        throw new Error(result.message || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setError('Failed to submit form. Please try again or contact us directly at technical@lwindia.com');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -141,12 +182,20 @@ const HirexInterestSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-md font-bold text-lg mt-4 transition-all duration-300 shadow-md"
+            disabled={loading}
+            className={`${
+              loading 
+                ? 'bg-gray-400 cursor-not-allowed' 
+                : 'bg-red-700 hover:bg-red-800'
+            } text-white px-8 py-3 rounded-md font-bold text-lg mt-4 transition-all duration-300 shadow-md`}
           >
-            Submit Interest
+            {loading ? 'Sending...' : 'Submit Interest'}
           </button>
+          {error && (
+            <div className="text-red-600 font-semibold mt-2">{error}</div>
+          )}
           {submitted && (
-            <div className="text-green-600 font-semibold mt-2">Thank you for your interest!</div>
+            <div className="text-green-600 font-semibold mt-2">Thank you for your interest! We'll get back to you soon.</div>
           )}
         </form>
       </div>
